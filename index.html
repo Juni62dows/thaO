@@ -682,7 +682,7 @@ async function setLang(code){
   try { localStorage.setItem('thalina_lang', code); } catch(e){}
   let d = I18N[code] || I18N.en;
   try {                                   /* серверный перевод приоритетнее */
-    const r = await fetch('lang/' + code + '.json');
+    const r = await fetch('https://srv5-file.dalam.world/thalina/lang/' + code + '.json');
     if (r.ok) d = await r.json();
   } catch(e){}
   dict = d; applyDict(d);
@@ -724,21 +724,67 @@ function loadJSON(url, fb){
   return fetch(url).then(r => r.ok ? r.json() : Promise.reject()).catch(() => fb);
 }
 
-const FALLBACK_PLAYLIST = { tracks: [
-  { title: "Moonlight Over Dalam",        file: "/music/01.mp3", cover: "", duration: "3:45" },
-  { title: "Эхо древнего леса",           file: "/music/02.mp3", cover: "", duration: "4:12" },
-  { title: "Starfall Lullaby",            file: "/music/03.mp3", cover: "", duration: "2:58" },
-  { title: "Танец с луной",               file: "/music/04.mp3", cover: "", duration: "3:21" },
-  { title: "Whispers of the Elder Tree",  file: "/music/05.mp3", cover: "", duration: "5:06" }
-]};
+const FALLBACK_PLAYLIST = {
+  "tracks": [
+    {
+      "title": "Vibe",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=337",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "1:55"
+    },
+    {
+      "title": "Замок",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=332",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "2:36"
+    },
+    {
+      "title": "On top",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=336",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "2:19"
+    },
+    {
+      "title": "Ночной рейд",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=334",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "3:02"
+    },
+    {
+      "title": "Winx",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=338",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "3:22"
+    },
+    {
+      "title": "Мудак",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=333",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "3:17"
+    },
+    {
+      "title": "Единорог",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=331",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "2:38"
+    },
+    {
+      "title": "Дракон",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=330",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "3:29"
+    },
+    {
+      "title": "Секретное место",
+      "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=335",
+      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "duration": "2:49"
+    }
+  ]
+};
 const FALLBACK_PHOTOS = { photos: [
-  { src:"https://picsum.photos/seed/thalina-1/1100/700.jpg",  thumb:"https://picsum.photos/seed/thalina-1/720/460.jpg",  caption:"Лунная поляна" },
-  { src:"https://picsum.photos/seed/thalina-2/800/1000.jpg",  thumb:"https://picsum.photos/seed/thalina-2/460/575.jpg",  caption:"Шёпот древнего леса" },
-  { src:"https://picsum.photos/seed/thalina-3/800/1000.jpg",  thumb:"https://picsum.photos/seed/thalina-3/460/575.jpg",  caption:"Звёздная пыль" },
-  { src:"https://picsum.photos/seed/thalina-4/800/1000.jpg",  thumb:"https://picsum.photos/seed/thalina-4/460/575.jpg",  caption:"Вечерний Далам" },
-  { src:"https://picsum.photos/seed/thalina-5/1100/700.jpg",  thumb:"https://picsum.photos/seed/thalina-5/720/460.jpg",  caption:"Терновая тропа" },
-  { src:"https://picsum.photos/seed/thalina-6/800/1000.jpg",  thumb:"https://picsum.photos/seed/thalina-6/460/575.jpg",  caption:"Танец теней" },
-  { src:"https://picsum.photos/seed/thalina-7/800/1000.jpg",  thumb:"https://picsum.photos/seed/thalina-7/460/575.jpg",  caption:"Первый снег эльфов" }
+ 
+  { src:"https://srv5-file.dalam.world/thalina/Thalina_13.jpg",  thumb:"https://srv5-file.dalam.world/thalina/Thalina_13.jpg",  caption:"Wait..." }
 ]};
 
 /* Генеративная обложка трека: тёмный винил с золотыми орбитами */
