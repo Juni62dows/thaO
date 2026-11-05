@@ -394,7 +394,7 @@ footer{border-top:1px solid var(--border);text-align:center;padding:68px 24px 44
   <canvas id="sparks" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <div class="mascot-ring">
-      <img class="mascot" src="https://srv5-file.dalam.world/thalina/Thalina_0.jpg" alt="Thalina">
+      <img class="mascot" src="https://dwstatic.dalam.world/thalina/Thalina_0.jpg" alt="Thalina">
     </div>
     <h1 class="hero-name"><span class="st">✦</span>THALINA<span class="st">✦</span></h1>
     <p class="hero-sub" data-i18n="hero_subtitle">Та самая эльфийка. Та самая Алина.</p>
@@ -473,7 +473,7 @@ footer{border-top:1px solid var(--border);text-align:center;padding:68px 24px 44
     <div class="sec-line reveal" style="--d:.08s"></div>
     <div class="about-grid">
       <figure class="about-photo reveal" style="--d:.12s">
-        <div class="mascot-ring"><img src="https://srv5-file.dalam.world/thalina/Thalina_0.jpg" alt="Thalina"></div>
+        <div class="mascot-ring"><img src="https://dwstatic.dalam.world/thalina/Thalina_0.jpg" alt="Thalina"></div>
       </figure>
       <div class="reveal" style="--d:.2s">
         <p class="about-text" data-i18n="about_text">Thalina — музыкант и персонаж, рождённый на пересечении реального мира и фэнтези.
@@ -729,62 +729,62 @@ const FALLBACK_PLAYLIST = {
     {
       "title": "Vibe",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=337",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "1:55"
     },
     {
       "title": "Замок",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=332",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "2:36"
     },
     {
       "title": "On top",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=336",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "2:19"
     },
     {
       "title": "Ночной рейд",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=334",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "3:02"
     },
     {
       "title": "Winx",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=338",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "3:22"
     },
     {
       "title": "Мудак",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=333",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "3:17"
     },
     {
       "title": "Единорог",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=331",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "2:38"
     },
     {
       "title": "Дракон",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=330",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "3:29"
     },
     {
       "title": "Секретное место",
       "file": "https://dalam.world/applications/core/interface/file/attachment.php?id=335",
-      "cover": "https://srv5-file.dalam.world/thalina/Thalina-TheSameElf.jpg",
+      "cover": "https://dwstatic.dalam.world/thalina/Thalina-TheSameElf.jpg",
       "duration": "2:49"
     }
   ]
 };
 const FALLBACK_PHOTOS = { photos: [
  
-  { src:"https://srv5-file.dalam.world/thalina/Thalina_13.jpg",  thumb:"https://srv5-file.dalam.world/thalina/Thalina_13.jpg",  caption:"Wait..." }
+  { src:"https://dwstatic.dalam.world/thalina/Thalina_13.jpg",  thumb:"https://dwstatic.dalam.world/thalina/Thalina_13.jpg",  caption:"Wait..." }
 ]};
 
 /* Генеративная обложка трека: тёмный винил с золотыми орбитами */
@@ -1159,8 +1159,8 @@ document.addEventListener('click', e => {
    СТАРТ
 ===================================================================== */
 Promise.all([
-  loadJSON('https://srv5-file.dalam.world/thalina/playlist.json', FALLBACK_PLAYLIST),
-  loadJSON('https://srv5-file.dalam.world/thalina/photos.json', FALLBACK_PHOTOS)
+  loadJSON('https://dwstatic.dalam.world/thalina/playlist.json', FALLBACK_PLAYLIST),
+  loadJSON('https://dwstatic.dalam.world/thalina/photos.json', FALLBACK_PHOTOS)
 ]).then(([pl, ph]) => {
   state.list = (pl && pl.tracks || []).filter(t => t && t.title);
   photos = (ph && ph.photos || []).filter(p => p && (p.src || p.thumb));
